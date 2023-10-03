@@ -1,0 +1,74 @@
+<!--
+ * @Author: wangwenjie
+ * @Date: 2023-09-27 15:25:47
+ * @LastEditors: wangwenjie
+ * @LastEditTime: 2023-09-27 15:41:32
+ * @FilePath: /JavaScriptLearn/html/24orderDemo.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            width: 600px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table,
+        th,
+        td{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th colspan="5">商用信息</th>
+        </tr>
+        <tr>
+            <td>名称</td>
+            <td>价格</td>
+            <td>数量</td>
+            <td>总价</td>
+            <td>地址</td>
+        </tr>
+    </table>
+    <script>
+        let init = () => {
+            let name = prompt('请输入商用名称');
+            let price = +prompt('请输入商用价格');
+            let number = +prompt('请输入商用数量');
+            let allPrice = price * number;
+            let address = prompt('请输入商用地址');
+            
+            let tr = document.createElement('tr');
+            let tdName = document.createElement('td');
+            let tdPrice = document.createElement('td');
+            let tdNumber = document.createElement('td');
+            let tdAllPrice = document.createElement('td');
+            let tdAddress = document.createElement('td');
+
+            tdName.innerText = name;
+            tdPrice.innerText = price;
+            tdNumber.innerText = number;
+            tdAllPrice.innerText = allPrice;
+            tdAddress.innerText = address;
+
+            tr.appendChild(tdName);
+            tr.appendChild(tdPrice);
+            tr.appendChild(tdNumber);
+            tr.appendChild(tdAllPrice);
+            tr.appendChild(tdAddress);
+            
+            let tab = document.querySelector(`.table`);
+            tab.appendChild(tr);
+        }
+        init()
+    </script>
+</body>
+</html>

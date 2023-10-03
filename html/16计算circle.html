@@ -1,0 +1,29 @@
+<!--
+ * @Author: wangwenjie
+ * @Date: 2023-09-26 18:23:37
+ * @LastEditors: wangwenjie
+ * @LastEditTime: 2023-09-26 18:25:46
+ * @FilePath: /JavaScriptLearn/html/16计算circle.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const PI = 3.14159
+        let r = prompt("请输入circle半径");
+        let re = PI * r * r
+        document.writeln("面积为：" + re);
+
+        // 不是数字 与nan操作后都是nan
+        let nan = NaN;
+    </script>
+</body>
+
+</html>
